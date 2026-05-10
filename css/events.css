@@ -1,0 +1,488 @@
+@import url(vars.css);
+
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+.events-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 40px;
+    align-items: flex-start;
+}
+
+.events-container h1{
+    font-family: var(--ff-heading);
+    font-size: 40px;
+}
+
+.events-container p{
+    font-family: var(--ff-body);
+    font-size: 20px;
+}
+
+.left-side {
+    flex: 2;
+}
+
+.right-side {
+    flex: 1;
+    min-width: 350px;
+}
+
+/* Calendar */
+.calendar {
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid var(--c-border);
+    font-family: var(--ff-body);
+    width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.calendar iframe{
+    width: 100%;
+    height: 400px;
+}
+
+.past-events-title {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-family: var(--ff-heading);
+    font-size: 30px;
+}
+
+/* Slideshow */
+.slideshow-section {
+    width: 100%;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: 10px auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -22px;
+    padding: 16px;
+    color: var(--c-white);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.caption-text {
+    color: var(--c-white);
+    font-size: 15px;
+    padding: 10px;
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    font-family: var(--ff-body);
+}
+
+.slide-num {
+    color: var(--c-white);
+    font-size: 18px;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: var(--ff-body);
+}
+
+.dots-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 4px;
+    background-color: var(--c-navy);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: var(--c-navy-light);
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.right-side {
+    text-align: center;
+}
+.right-side h2 {
+    font-family: var(--ff-heading);
+    font-size: 30px;
+}
+
+/* Instagram Post */
+.instagram-post {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.instagram-post iframe,
+.instagram-post blockquote {
+    width: 100%;
+}
+
+/* RSVP Button */
+.rsvp-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 22px;
+    border: 2px solid var(--c-btn-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--c-btn-border);
+    font-family: var(--ff-body);
+    text-align: center;
+}
+
+.rsvp-button:hover {
+    background-color: var(--c-bg-btn-hover);
+    color: var(--c-btn-text);
+}
+
+
+
+
+/* COUNTDOWN TIMER START*/
+.countdown-container {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--c-bg);
+    margin: 20px 40px;
+    border-radius: 10px;
+    border: 1px solid var(--c-border);
+    color: var(--c-text);
+}
+
+.countdown-container h2 {
+    font-family: var(--ff-heading);
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: var(--c-text);
+}
+
+#countdown {
+    font-family: var(--ff-body);
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--c-text);
+}
+
+.no-event {
+    font-size: 20px;
+    color: gray;
+}
+/* COUNTDOWN TIMER END */
+
+
+
+
+/* ADD TO CALENDAR BUTTON START */
+.add-calendar-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 18px;
+    border-radius: 6px;
+    border: 2px solid var(--c-btn-border);
+    color: var(--c-btn-border);
+    text-decoration: none;
+    font-family: var(--ff-body);
+    transition: 0.2s ease;
+}
+
+.add-calendar-btn:hover {
+    background: var(--c-bg-btn-hover);
+    color: var(--c-btn-text);
+}
+/* ADD TO CALENDAR BUTTON END */
+
+
+
+
+/* FILTER SECTION START */
+.filter-section {
+    padding: 40px;
+    margin: 20px 40px;
+}
+
+.filter-title {
+    font-family: var(--ff-heading);
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filter-controls {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.filter-btn {
+    margin: 5px;
+    padding: 8px 18px;
+    border: 2px solid var(--c-btn-border);
+    background: transparent;
+    color: var(--c-btn-border);
+    font-family: var(--ff-body);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--c-bg-btn-hover);
+    color: var(--c-btn-text);
+}
+
+.reset-btn {
+    border-color: var(--c-navy);
+}
+
+.filter-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.event-item {
+    display: block;
+}
+
+.filter-card {
+    background: var(--c-bg);
+    padding: 40px 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: var(--ff-body);
+    font-size: 18px;
+    border: 1px solid var(--c-border);
+    color: var(--c-text);
+    transition: 0.2s ease;
+}
+
+.filter-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.filter-card p {
+    margin: 0;
+    font-family: var(--ff-body);
+    color: var(--c-text);
+}
+/* FILTER SECTION END */
+
+
+
+
+/* MODAL START */
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-modal.show {
+    display: flex;
+}
+
+.modal-box {
+    background: var(--c-bg);
+    padding: 25px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+    border: 1px solid var(--c-border);
+    color: var(--c-text);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--c-text);
+}
+
+.modal-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+#modalTitle {
+    font-family: var(--ff-heading);
+    color: var(--c-text);
+}
+
+#modalDesc {
+    font-family: var(--ff-body);
+    font-size: 16px;
+    color: var(--c-text);
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.95);}
+    to {opacity: 1; transform: scale(1);}
+}
+/* MODAL END */
+
+
+
+/* MEDIA QUERIES START */
+@media screen and (max-width: 768px){
+    .events-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .events-container h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .events-container p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .right-side {
+        min-width: 100%;
+    }
+
+    /* Calendar */
+    .calendar {
+        height: 300px;
+    }
+
+    .calendar iframe {
+        height: 300px;
+    }
+
+    /* Slideshow */
+    .slide img {
+        height: 220px;
+    }
+
+    .prev, .next {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .caption-text {
+        font-size: 13px;
+    }
+
+    .slide-num {
+        font-size: 14px;
+    }
+
+    .past-events-title {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .instagram-post {
+        max-width: 100%;
+    }
+
+    .rsvp-button {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+    .filter-container {
+        grid-template-columns: 1fr;
+    }
+
+    .event-item {
+        width: 100%;
+    }
+
+    .filter-card {
+        width: 100%;
+    }
+}
+/* MEDIA QUERIES END */

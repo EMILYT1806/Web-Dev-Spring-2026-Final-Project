@@ -1,0 +1,139 @@
+@import url(vars.css);
+
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+/* Intro Statement */
+.intro {
+  text-align: center;
+  padding: 20px 20px;
+  background-color: var(--c-card-bg);
+}
+
+.intro h1 {
+  font-family: var(--ff-heading);
+  color: var(--c-text);
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* Content Sections */
+.content-section {
+  margin: 80px auto;
+  max-width: 1000px;
+  font-family: var(--ff-body);
+  text-align: center;
+}
+
+.content-section h2 {
+  margin-bottom: 20px;
+  color: var(--c-text);
+  font-family: var(--ff-heading);
+  font-size: 25px;
+}
+
+.content-section p {
+  margin: auto;
+  max-width: 1000px;
+  font-family: var(--ff-body);
+  font-size: 20px;
+}
+
+.content-section li {
+  list-style-type: none;
+}
+
+/* Pillars */
+.pillar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 70px;
+  margin-top: 30px;
+}
+
+.pillar {
+  width: 250px;
+  background-color: var(--c-card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--c-btn-border);
+  text-align: center;
+  font-family: var(--ff-body);
+  color: var(--c-text);
+}
+
+.pillar h3 {
+  color: var(--c-text);
+  font-family: var(--ff-body);
+  font-size: 20px;
+}
+
+.pillar p {
+  font-size: 15px;
+  font-family: var(--ff-body);
+}
+
+
+
+
+/* MEDIA QUERIES START */
+@media screen and (max-width: 768px){
+  .intro {
+    padding: 15px;
+  }
+
+  .intro h1 {
+    font-size: 28px;
+  }
+
+  .content-section {
+    margin: 40px 20px;
+    max-width: 100%;
+  }
+
+  .content-section h2 {
+    font-size: 22px;
+  }
+
+  .content-section p {
+    max-width: 100%;
+    font-size: 16px;
+  }
+
+  .pillar-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .pillar {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .pillar h3 {
+    font-size: 18px;
+  }
+
+  .pillar p {
+    font-size: 14px;
+  }
+}
+/* MEDIA QUERIES END */

@@ -1,0 +1,219 @@
+@import url(vars.css);
+
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+/* SASE Intro */
+.intro {
+  text-align: center;
+  padding: 10px;
+  font-family: var(--ff-heading);
+}
+
+.intro h1 {
+  font-size: 40px;
+  color: var(--c-text);
+}
+
+.intro p {
+  font-size: 20px;
+  font-family: var(--ff-body);
+}
+
+/* Slideshow */
+.slideshow-container {
+  max-width: 1400px;
+  position: relative;
+  margin: 10px auto;
+}
+
+.slide {
+  display: none;
+}
+
+.slide img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: -22px;
+  padding: 16px;
+  color: var(--c-white);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.caption-text {
+  color: var(--c-white);
+  font-size: 15px;
+  padding: 10px;
+  position: absolute; 
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+  font-family: var(--ff-body);
+}
+
+.slide-num {
+  color: var(--c-white);
+  font-size: 20px;
+  padding: 8px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--ff-body);
+}
+
+.dots-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 4px;
+  background-color: var(--c-text);
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  opacity: 0.5;
+}
+
+.active, .dot:hover {
+  background-color: var(--c-text);
+  opacity: 1;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* What is SASE and Events Sections */
+.section {
+  text-align: center;
+  margin: 80px auto;
+  max-width: 800px;
+}
+
+.section h2 {
+  font-family: var(--ff-heading);
+  font-size: 30px;
+}
+
+.section p {
+  font-family: var(--ff-body);
+  font-size: 20px;
+}
+
+/* Buttons */
+.button{
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 22px;
+  border: 2px solid var(--c-btn-border);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--c-btn-border);
+  font-family: var(--ff-body);
+}
+
+.button:hover {
+  background-color: var(--c-bg-btn-hover);
+  color: var(--c-btn-text);
+}
+
+/* Pillars */
+.pillars {
+  text-align: center;
+  margin: 80px 0;
+}
+
+.pillars h2 {
+  font-family: var(--ff-heading);
+  font-size: 30px;
+}
+
+.pillar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.pillar {
+  width: 30%;
+}
+
+.pillar span {
+  font-size: 70px;
+}
+
+.pillars h3 {
+  font-family: var(--ff-body);
+  font-size: 20px;
+}
+
+
+
+
+/* MEDIA QUERIES START */
+@media screen and (max-width: 768px){
+  /* Slideshow resize */
+  .slide img {
+    height: 250px;
+  }
+
+  .pillar-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pillar {
+    width: 90%;
+    margin-bottom: 25px;
+  }
+
+  .section {
+    margin: 50px 20px;
+  }
+}
+/* MEDIA QUERIES END */

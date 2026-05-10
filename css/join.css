@@ -1,0 +1,189 @@
+@import url(vars.css);
+
+/* GLOBAL */
+* {
+  box-sizing: border-box;
+  /* outline: 1px solid red; */
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+
+
+
+.apply-container {
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    padding: 50px 60px;
+    align-items: flex-start;
+}
+
+.left-side {
+    flex: 2;
+    max-width: 650px;
+}
+
+.right-side {
+    flex: 1;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--ff-heading);
+    text-align: center;
+}
+
+.left-side h1 {
+    margin-bottom: 20px;
+    font-family: var(--ff-heading);
+}
+
+.left-side p {
+    margin-bottom: 18px;
+    line-height: 1.6;
+    font-family: var(--ff-body);
+}
+
+.left-side h2 {
+    margin-bottom: 18px;
+    line-height: 1.6;
+    font-family: var(--ff-heading);
+}
+
+.deadline {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-size: 18px;
+    color: var(--c-primary);
+    font-family: var(--ff-body);
+}
+
+.benefits-list {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    font-family: var(--ff-body);
+}
+
+.benefits-list li {
+    margin-bottom: 10px;
+}
+
+/* Apply button */
+.apply-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 22px;
+    border: 2px solid var(--c-btn-border);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--c-btn-border);
+    font-family: var(--ff-body);
+}
+
+.apply-button:hover {
+    background-color: var(--c-bg-btn-hover);
+    color: var(--c-btn-text);
+}
+
+.closed-message {
+    padding: 18px 20px;
+    margin-bottom: 25px;
+    border-left: 4px solid var(--c-primary);
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.closed-message h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: var(--ff-heading);
+}
+
+.closed-message p {
+    margin-bottom: 10px;
+    font-family: var(--ff-body);
+    line-height: 1.5;
+}
+
+
+
+
+/* INSTAGRAM POST DISABLED, KEPT FOR FUTURE USE */
+/*
+.instagram-post {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.instagram-post iframe,
+.instagram-post blockquote {
+    width: 100%;
+}
+*/
+
+
+
+
+/* MEDIA QUERIES START */
+@media screen and (max-width: 768px){
+    .apply-container {
+        flex-direction: column;
+        padding: 25px;
+        gap: 30px;
+    }
+
+    .left-side {
+        max-width: 100%;
+    }
+
+    .right-side {
+        min-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left-side h1 {
+        font-size: 25px;
+    }
+
+    .left-side h2 {
+        font-size: 25px;
+    }
+
+    .left-side p {
+        font-size: 16px;
+    }
+
+    .deadline {
+        font-size: 16px;
+    }
+
+    .benefits-list {
+        padding-left: 15px;
+        text-align: left;
+    }
+
+    /* Button */
+    .apply-button {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+/* INSTAGRAM POST DISABLED, KEPT FOR FUTURE USE */
+    /*
+    .instagram-post {
+        max-width: 100%;
+    }
+    */
+}
+/* MEDIA QUERIES END */

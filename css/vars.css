@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Prata&family=Share+Tech+Mono&display=swap');
+
+/* LIGHT MODE */
+:root {
+  /* NYU Color Palette */
+  --c-nyu-violet: #57068c;
+  --c-nyu-violet-dark: #3f0466;
+  --c-nyu-violet-light: #9e79c3;
+
+  /* SASE Color Palette */
+  --c-navy: #141b4d;
+  --c-navy-light: #434b83;
+
+  /* Base */
+  --c-white: #ffffff;
+  --c-light-gray: #f4f5f9;
+
+  /* Main colors */
+  --c-bg: var(--c-light-gray);
+  --c-text: var(--c-navy);
+  --c-primary: var(--c-nyu-violet);
+  --c-secondary: var(--c-navy);
+
+  /* Buttons */
+  --c-btn-border: var(--c-nyu-violet-dark);
+  --c-bg-btn-hover: var(--c-nyu-violet-light);
+  --c-btn-text: var(--c-white);
+
+  /* Navigation */
+  --c-nav-bg: var(--c-light-gray);
+  --c-nav-text: var(--c-navy);
+  --c-nav-hover: var(--c-navy-light);
+  --c-nav-border: rgba(20, 27, 77, 0.15);
+
+  /* Footer */
+  --c-footer-bg: var(--c-navy);
+  --c-footer-text: var(--c-white);
+  --c-footer-link: var(--c-nyu-violet-light);
+
+  /* Fonts */
+  --ff-heading: "Prata", serif;
+  --ff-body: "Share Tech Mono", monospace;
+
+  /* Fading */
+  --transition: 0.25s ease;
+}
+
+/* DARK MODE */
+[data-theme="dark"] {
+  --c-bg: #0f1220;
+  --c-text: #f4f5f9;
+  --c-primary: var(--c-nyu-violet-light);
+  --c-secondary: var(--c-navy-light);
+
+  /* Buttons */
+  --c-btn-border: var(--c-nyu-violet-light);
+  --c-bg-btn-hover: var(--c-nyu-violet);
+  --c-btn-text: #ffffff;
+
+  /* Navigation */
+  --c-nav-bg: #141826;
+  --c-nav-text: #f4f5f9;
+  --c-nav-hover: var(--c-nyu-violet-light);
+  --c-nav-border: rgba(255, 255, 255, 0.12);
+
+  /* Footer */
+  --c-footer-bg: #0b0d18;
+  --c-footer-text: #f4f5f9;
+  --c-footer-link: var(--c-nyu-violet-light);
+}
